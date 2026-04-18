@@ -75,7 +75,7 @@ public class Viterbi {
             Map<String, List<String>> newPath = new HashMap<>();
 
             for (String currState : states) {
-                double maxProb = -1;
+                double maxProb = Double.NEGATIVE_INFINITY;
                 String bestPrev = null;
 
                 for (String prevState : states) {
@@ -100,7 +100,7 @@ public class Viterbi {
             path = newPath;
         }
 
-        double maxProb = -1;
+        double maxProb = Double.NEGATIVE_INFINITY;
         String bestState = null;
 
         for (String s : states) {
